@@ -14,14 +14,16 @@ do {
 console.log(arrayRandom);
 
 //estraggo i numeri dell'arrayRandom
-var numeroQuadrato = arrayRandom[numeroRandom];
+var numeroQuadrato = arrayRandom.join(' ');
+
+console.log(numeroQuadrato);
 
 $('.quadrato').one('click', function(){
-    var posizione = $(this).index();
-    console.log(posizione);
-    var numeroQuadrato = $(this).eq(posizione);
-    console.log(numeroQuadrato);
-    $(this).append(posizione).text();
+    // var posizione = $(this).index();
+    // console.log(posizione);
+    // var numeroQuadrato = $(this).eq(posizione);
+    // console.log(numeroQuadrato);
+     $(this).append(numeroQuadrato).text();
 });
 
 
