@@ -2,29 +2,29 @@
 // Con jQuery, scrivere un numero random tra 0 e 10 dentro ognuno.
 // BONUS 1: generare la griglia con jQuery
 // BONUS 2: se il numero da inserire è pari scriverlo in rosso, se è dispari in nero, se è 0 in verde
-
-//aprire un array per i numeri random (25):
-var arrayRandom = [];
-//ciclo che gira 25 volte per generare 25 numeri random
-do {
+$('.quadrato').each(function(){
     var numeroRandom = generaRandom(0, 10);
-    arrayRandom.push(numeroRandom);
-} while (arrayRandom.length < 25);
+    $(this).append(numeroRandom);
+})
 
-console.log(arrayRandom);
 
-//estraggo i numeri dell'arrayRandom
-var numeroQuadrato = arrayRandom.join(' ');
 
-console.log(numeroQuadrato);
-
-$('.quadrato').one('click', function(){
-    // var posizione = $(this).index();
-    // console.log(posizione);
-    // var numeroQuadrato = $(this).eq(posizione);
-    // console.log(numeroQuadrato);
-     $(this).append(numeroQuadrato).text();
-});
+// //aprire un array per i numeri random (25):
+// var arrayRandom = [];
+// //ciclo che gira 25 volte per generare 25 numeri random
+// do {
+//     var numeroRandom = generaRandom(0, 10);
+//     arrayRandom.push(numeroRandom);
+// } while (arrayRandom.length < 25);
+//
+// console.log(arrayRandom);
+// $('.quadrato').one('click', function(){
+//     // var posizione = $(this).index();
+//     // console.log(posizione);
+//     // var numeroQuadrato = $(this).eq(posizione);
+//     // console.log(numeroQuadrato);
+//      $(this).append(numeroQuadrato).text();
+// });
 
 
 function generaRandom(min, max) {
