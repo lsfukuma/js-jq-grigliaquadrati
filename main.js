@@ -5,10 +5,16 @@
 for (var i = 0; i < 25; i++) {
     $('.griglia').append('<div class="quadrato"></div>');
 }
+
 $('.quadrato').each(function(){
     var numeroRandom = generaRandom(0, 10);
     $(this).append(numeroRandom);
-})
+    if (numeroRandom == 0) {
+        $(this).addClass('zero');
+    } else if  (numeroRandom % 2 == 0) {
+        $(this).addClass('rosso');
+    }
+});
 
 // //aprire un array per i numeri random (25):
 // var arrayRandom = [];
@@ -25,7 +31,6 @@ $('.quadrato').each(function(){
 //     console.log(numeroQuadrato);
 //      $(this).append(numeroQuadrato);
 // });
-
 
 function generaRandom(min, max) {
     return Math.floor(Math.random () * (max - min) + min);
